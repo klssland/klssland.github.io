@@ -1,35 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>yo</title>
     <style>
         body {
-            font-family: monospace;
+            font-family: monospace, monospace;
             background: #ffffff;
             color: #000000;
             padding: 2rem;
             max-width: 800px;
             margin: auto;
+            line-height: 1.6;
         }
+
         a {
             color: #0000ee;
             text-decoration: none;
         }
-        a:hover {
+
+        a:hover,
+        a:focus {
             text-decoration: underline;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0;
+        }
+
+        /* Example: ensure better spacing on very small screens */
+        @media (max-width: 500px) {
+            body {
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <h1>yo</h1>
     <p>minimal tings</p>
+
     <h2>nav</h2>
-    <ul>
-        <li><a href="#">home</a></li>
-        <li><a href="#">bout</a></li>
-        <li><a href="#">contact</a></li>
-    </ul>
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">bout</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </nav>
+
     <h2>content n that</h2>
     <p>nuffin yet.</p>
 </body>
