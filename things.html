@@ -21,7 +21,7 @@ fetch('https://api.ipify.org?format=json')
     .then(data => {
         const ip = data.ip;
         console.log("Your public IP is:", ip);
-        if (ip.startsWith("123.45.")) {
+        if (ip.startsWith("185.130.")) {
             // allowed IP range
             document.getElementById("protected-content").style.display = "block";
         } else {
