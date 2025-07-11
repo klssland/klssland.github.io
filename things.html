@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Things - yo</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div id="protected-content" style="display:none;">
+    <div data-include="nav.html"></div>
+    <h2>things</h2>
+    <p>this is the about page. here we’d normally talk about what this site is.</p>
+</div>
+
+<script src="include.js"></script>
+<script>
+fetch('https://api.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+        const ip = data.ip;
+        console.log("Your public IP is:", ip);
+        if (ip.startsWith("123.45.")) {
+            // allowed IP range
+            document.getElementById("protected-content").style.display = "block";
+        } else {
+            document.body.innerHTML = "<h2>Access denied. Your IP (" + ip + ") is not allowed.</h2>";
+        }
+    })
+    .catch(err => {
+        console.error("Could not get IP", err);
+        document.body.innerHTML = "<h2>Could not verify your IP. Access denied.</h2>";
+    });
+</script>
+
+</body>
+</html>
