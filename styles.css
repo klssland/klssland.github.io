@@ -7,26 +7,28 @@ body {
     margin: auto;
     line-height: 1.6;
 }
-
 a {
     color: #0000ee;
     text-decoration: none;
 }
-
 a:hover,
 a:focus {
     text-decoration: underline;
 }
-
 nav ul {
     list-style: none;
     padding: 0;
 }
-
 nav li {
     margin-bottom: 0.5rem;
 }
-
+pre {
+    background: #000000;
+    color: #f8f8f8;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+}
 @media (max-width: 500px) {
     body {
         padding: 1rem;
