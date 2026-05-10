@@ -10,8 +10,18 @@
 
 <div data-include="/nav.html"></div>
 
-<p>
-To test your query, run the following in Terminal
+<p></p>You'll need to add the following to your macOS Okta configuration profile</p>
+  
+<pre><code>
+<key>OktaVerify.EnableOSQueryCustomChecks</key>
+<true/>
+<key>OktaVerify.OSQueryAllowedDomains</key>
+<string>xxx.okta.com/string>
+<key>OktaVerify.OSQueryCustomChecksTimeout</key>
+<string>5</string>
+</code></pre>
+
+<p>To test your query, run the following in Terminal</p>
 <pre><code>sudo /Applications/Okta\ Verify.app/Contents/XPCServices/OktaAuthenticationService.xpc/Contents/Resources/osqueryd --S --json "YOUR QUERY"</code></pre>
 
 <script src="/include.js"></script>
