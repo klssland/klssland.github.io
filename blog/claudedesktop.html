@@ -7,14 +7,13 @@
 <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-
 <div data-include="/nav.html"></div>
-
 <p>It's becoming more commonplace for orgs to start rolling out Claude Desktop and Claude Code, however in some orgs it's a requirement to only allow access to those apps for approved users</p>
-<p></p>
-  
-<pre><code>
-<?xml version="1.0" encoding="UTF-8"?>
+
+<pre><code id="code"></code></pre>
+
+<script>
+  document.getElementById('code').textContent = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -50,9 +49,9 @@
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
-</plist>
-</code></pre>
-  
+</plist>`;
+</script>
+
 <script src="/include.js"></script>
 </body>
 </html>
